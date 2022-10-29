@@ -30,6 +30,15 @@ function addEmployee() {
     console.log('employee values: ', employee );
     company.push(employee);
     console.log('employees in company', company);
+
+    //going to now clear the values after pushing the values to the company array
+    $('#firstNameInput').val('');
+    $('#lastNameInput').val('');
+    $('#idInput').val('');
+    $('#titleInput').val('');
+    $('#salaryInput').val('');
+    //testing dom, works!
+
 }
 //pushing employee values to an array, mixed up words on accident
 //testing the array fills correctly
