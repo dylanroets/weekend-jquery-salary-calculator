@@ -1,5 +1,5 @@
 //Storing global variables at the top of JS
-let employees = []
+let company = [];
 
 
 
@@ -28,4 +28,13 @@ function addEmployee() {
     }
     //testing if function works
     console.log('employee values: ', employee );
+    company.push(employee);
+    console.log('employees in company', company);
 }
+//pushing employee values to an array, mixed up words on accident
+//testing the array fills correctly
+console.log('employees in company', company);
+
+
+
+//not working, doesnt recognice employee, I'm going to try and render
