@@ -8,17 +8,26 @@ h1 {
     padding: 50px;
     margin: 0px;
 }
+#tableHeader {
+    margin-left: 138px;
+}
+
 #submitEmployeeBtn {
     height: 30px;
     width: 100px;
     border-radius: 7px;
     margin-left: 37px;
 }
+#deleteEmployeeBtn {
+    height: 30px;
+    width: 100px;
+    border-radius: 7px;
+}
 
 input {
-    margin-right: 15px;
-    margin-left: 15px;
     height: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
 input::placeholder {
     font-size: larger;
@@ -30,4 +39,7 @@ table, th, td {
     border:1px solid black;
     height: 30px;
     width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+
 }
