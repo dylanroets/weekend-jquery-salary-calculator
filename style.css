@@ -1,4 +1,25 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 h1 {
-    color: brown;
+    background-color: grey;
+    color: rgb(214, 212, 212);
     text-align: center;
 }
+#submitEmployeeBtn {
+    height: 30px;
+    width: 100px;
+    border-radius: 7px;
+}
+
+input {
+    margin-right: 15px;
+    margin-left: 15px;
+    height: 25px;
+}
+input::placeholder {
+    font-size: larger;
+}
+input:focus::placeholder {
+    color: transparent;
+  }
