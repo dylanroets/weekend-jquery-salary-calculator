@@ -5,11 +5,14 @@ h1 {
     background-color: grey;
     color: rgb(214, 212, 212);
     text-align: center;
+    padding: 50px;
+    margin: 0px;
 }
 #submitEmployeeBtn {
     height: 30px;
     width: 100px;
     border-radius: 7px;
+    margin-left: 37px;
 }
 
 input {
@@ -23,3 +26,8 @@ input::placeholder {
 input:focus::placeholder {
     color: transparent;
   }
+table, th, td {
+    border:1px solid black;
+    height: 30px;
+    width: 68em;
+}
