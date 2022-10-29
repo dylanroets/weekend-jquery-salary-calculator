@@ -8,10 +8,20 @@ h1 {
     padding: 50px;
     margin: 0px;
 }
-#tableHeader {
-    margin-left: 138px;
+#inputHeader {
+    text-align: center;
+    text-decoration: solid;
+    text-decoration: underline;
 }
-
+#tableHeader {
+    text-align: center;
+    text-decoration: solid;
+    text-decoration: underline;
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+}
 #submitEmployeeBtn {
     height: 30px;
     width: 100px;
@@ -23,11 +33,8 @@ h1 {
     width: 100px;
     border-radius: 7px;
 }
-
 input {
-    height: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 20px;
 }
 input::placeholder {
     font-size: larger;
@@ -41,5 +48,4 @@ table, th, td {
     width: 68em;
     margin-left: auto;
     margin-right: auto;
-
 }

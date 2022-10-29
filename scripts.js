@@ -39,11 +39,30 @@ function addEmployee() {
     $('#salaryInput').val('');
     //testing dom, works!
 
+    //testing the render
+    render();
+
 }
 //pushing employee values to an array, mixed up words on accident
 //testing the array fills correctly
 console.log('employees in company', company);
 
+//Going to start a Render function to get values updating the DOM
+function render() {
+    //not sure if I need to empty table, but will try
+    $('#employeeTable').empty();
+
+    for (let employee of company) {
+        $('#employeeTable').append(`
+            <tr>
+                <td>${employee.firstName}</td>
+                <td>${employee.lastName}</td>
+                <td>${employee.id}</td>
+                <td>${employee.title}</td>
+                <td>${employee.salary}</td>
+                <td><button id="deleteEmployeeBtn">Delete</button></td>
+        `)  
+    }
 
 
-//not working, doesnt recognice employee, I'm going to try and render
+}
