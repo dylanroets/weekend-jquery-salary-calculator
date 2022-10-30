@@ -104,7 +104,9 @@ function render() {
             </tr>
         `)  
     }
-
+    if (monthlySalaries > 20000) {
+        $('#totalBoxLabel').addClass('redBox');
+    }   
 
 }
 
@@ -130,7 +132,19 @@ function monthlySalaryTotal() {
         <aside id="totalBox">${monthlySalaries}</aside>
     `)
 
+    // if (monthlySalaries > 20000) {
+    //     $('#totalBox').addclass('redBox');
+    // }   else {
+    //     $('#totalBox').removeclass('redBox');
+    // }
 
 }
 
-monthlySalaryTotal();
+// function getTheRedBox() {
+//     if (monthlySalaries > 20000) {
+//         $('#totalBox').addclass('redBox');
+//     }   else {
+//         $('#totalBox').removeclass('redBox');
+//     }
+// }
+

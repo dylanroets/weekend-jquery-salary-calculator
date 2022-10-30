@@ -52,10 +52,14 @@ table, th, td {
 #totalBoxLabel {
     text-align: right;
     font-size: x-large;
-    color: black;  
+    color: black;
+    padding-top: 30px;  
 }
 aside {
     text-align: right;
     font-size: x-large;
     color: black;
+}
+.redBox {
+    background-color: crimson;
 }
