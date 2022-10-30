@@ -49,3 +49,8 @@ table, th, td {
     margin-left: auto;
     margin-right: auto;
 }
+aside {
+    text-align: right;
+    font-size: x-large;
+    color: black;
+}
