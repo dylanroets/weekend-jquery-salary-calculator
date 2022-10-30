@@ -54,14 +54,19 @@ function onDelete() {
     
     console.log('in on delete'); //testing
     //now to figure out what I want to delete
-    let employeeToDelete = $(this).parent();
+    let employeeToDelete = $(this).parent().siblings();
     console.log('content to delete is: ', employeeToDelete);
 
+        for (let employee of company) {
+            if (employee.id !== employeeToDelete) {
+                newCompany.push(employee);
 
 
+            }
 
-
-
+        }
+        company = newCompany;
+        render();
 }
 
 //Going to start a Render function to get values updating the DOM
@@ -78,6 +83,7 @@ function render() {
                 <td>${employee.title}</td>
                 <td>${employee.salary}</td>
                 <td><button id="deleteEmployeeBtn">Delete</button></td>
+            </tr>
         `)  
     }
 
