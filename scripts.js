@@ -122,6 +122,9 @@ function monthlySalaryTotal() {
     console.log('monthly: ', monthlySalaries, 'yearly: ', annualSalaries);
     //able to get both these number working and logging in the console.
     //now i need to figure out how to render them to the DOM
+    
+    //empty box first
+    $('#totalBox').empty();
 
     $('#totalBox').append(`
         <aside id="totalBox">${monthlySalaries}</aside>

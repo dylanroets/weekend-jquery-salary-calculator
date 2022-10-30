@@ -49,6 +49,11 @@ table, th, td {
     margin-left: auto;
     margin-right: auto;
 }
+#totalBoxLabel {
+    text-align: right;
+    font-size: x-large;
+    color: black;  
+}
 aside {
     text-align: right;
     font-size: x-large;
