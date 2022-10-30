@@ -113,10 +113,12 @@ function monthlySalaryTotal() {
     console.log('in monthlySalaryTotal');
     let annualSalaries = 0;
     for (let i = 0; i < company.length; i++) {
-        annualSalaries += company[i].salary;
+        annualSalaries += Number(company[i].salary);
     }
 
-    console.log('monthly or yearly total', annualSalaries);
+    monthlySalaries = annualSalaries/12
+
+    console.log('monthly: ', monthlySalaries, 'yearly: ', annualSalaries);
 
 
 
