@@ -119,6 +119,9 @@ function monthlySalaryTotal() {
     monthlySalaries = annualSalaries/12
 
     console.log('monthly: ', monthlySalaries, 'yearly: ', annualSalaries);
+    //able to get both these number working and logging in the console.
+    //now i need to figure out how to render them to the DOM
+    
 
 
 
