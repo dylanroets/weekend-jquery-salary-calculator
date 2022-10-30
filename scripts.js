@@ -27,6 +27,7 @@ function addEmployee() {
         salary: $('#salaryInput').val()
         
     }
+
     //testing if function works
     console.log('employee values: ', employee );
     company.push(employee);
@@ -40,6 +41,9 @@ function addEmployee() {
     $('#salaryInput').val('');
     //testing dom, works!
 
+    //adding salary calculator to test
+    monthlySalaryTotal();
+
     //testing the render
     render();
 
@@ -50,10 +54,20 @@ console.log('employees in company', company);
 
 //starting a onDelete function, wish me luck!!! This has been hard before
 function onDelete() {
+    let newCompany = [];
     console.log('in onDelete function', onDelete);
-
+    //this employeeToDelete was working but when I submitted another person after deleting they would all come back
+    //deleting them is just grabbing them and deleting what is there but not from the overall company array im guessing
     let employeeToDelete = $(this)
         employeeToDelete.closest('tr').remove();
+
+        for (let employee of company) {
+            if (employee !== employeeToDelete) {
+                newCompany.push(employee);
+            }
+        }
+
+        company = newCompany;
     // let newCompany = []; //will hold emplopyees we still want
     
     // console.log('in on delete'); //testing
@@ -95,3 +109,17 @@ function render() {
 }
 
 //function to add up individual salaries from the company and divide by 12
+function monthlySalaryTotal() {
+    console.log('in monthlySalaryTotal');
+    let annualSalaries = 0;
+    for (let i = 0; i < company.length; i++) {
+        annualSalaries += company[i].salary;
+    }
+
+    console.log('monthly or yearly total', annualSalaries);
+
+
+
+}
+
+monthlySalaryTotal();
