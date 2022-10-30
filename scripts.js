@@ -14,8 +14,6 @@ function onReady() {
     $('#submitEmployeeBtn').on('click', addEmployee);
     $('#employeeTable').on('click', '.delete-btn', onDelete);
 
-
-
 }
 //adding function to get info from input and store into array of employees
 function addEmployee() {
@@ -132,19 +130,4 @@ function monthlySalaryTotal() {
         <aside id="totalBox">${monthlySalaries}</aside>
     `)
 
-    // if (monthlySalaries > 20000) {
-    //     $('#totalBox').addclass('redBox');
-    // }   else {
-    //     $('#totalBox').removeclass('redBox');
-    // }
-
 }
-
-// function getTheRedBox() {
-//     if (monthlySalaries > 20000) {
-//         $('#totalBox').addclass('redBox');
-//     }   else {
-//         $('#totalBox').removeclass('redBox');
-//     }
-// }
-
