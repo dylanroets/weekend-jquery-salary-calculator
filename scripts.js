@@ -1,10 +1,10 @@
+$(document).ready(onReady);
+
 //Storing global variables at the top of JS
 let company = [];
 
 
 
-
-$(document).ready(onReady);
 
 function onReady() {
     console.log('JQ working');
@@ -12,7 +12,7 @@ function onReady() {
 
     //adding submit employee button
     $('#submitEmployeeBtn').on('click', addEmployee);
-    $('#employeeTable').on('click', '#deleteEmployeeBtn', onDelete);
+    $('#employeeTable').on('click', '.delete-btn', onDelete);
 
 
 
@@ -50,23 +50,27 @@ console.log('employees in company', company);
 
 //starting a onDelete function, wish me luck!!! This has been hard before
 function onDelete() {
-    let newCompany = []; //will hold emplopyees we still want
+    console.log('in onDelete function', onDelete);
+
+    let employeeToDelete = $(this)
+        employeeToDelete.closest('tr').remove();
+    // let newCompany = []; //will hold emplopyees we still want
     
-    console.log('in on delete'); //testing
-    //now to figure out what I want to delete
-    let employeeToDelete = $(this).parent().siblings();
-    console.log('content to delete is: ', employeeToDelete);
+    // console.log('in on delete'); //testing
+    // //now to figure out what I want to delete
+    // let employeeToDelete = $(this).parent().siblings();
+    // console.log('content to delete is: ', employeeToDelete);
 
-        for (let employee of company) {
-            if (employee.id !== employeeToDelete) {
-                newCompany.push(employee);
+    //     for (let employee of company) {
+    //         if (employee.id !== employeeToDelete) {
+    //             newCompany.push(employee);
 
 
-            }
+    //         }
 
-        }
-        company = newCompany;
-        render();
+    //     }
+    //     company = newCompany;
+    //     render();
 }
 
 //Going to start a Render function to get values updating the DOM
@@ -82,7 +86,7 @@ function render() {
                 <td>${employee.id}</td>
                 <td>${employee.title}</td>
                 <td>${employee.salary}</td>
-                <td><button id="deleteEmployeeBtn">Delete</button></td>
+                <td><button class="delete-btn">Delete</button></td>
             </tr>
         `)  
     }
