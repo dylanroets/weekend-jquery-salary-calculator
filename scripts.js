@@ -12,6 +12,7 @@ function onReady() {
 
     //adding submit employee button
     $('#submitEmployeeBtn').on('click', addEmployee);
+    $('#employeeTable').on('click', '#deleteEmployeeBtn', onDelete);
 
 
 
@@ -47,6 +48,22 @@ function addEmployee() {
 //testing the array fills correctly
 console.log('employees in company', company);
 
+//starting a onDelete function, wish me luck!!! This has been hard before
+function onDelete() {
+    let newCompany = []; //will hold emplopyees we still want
+    
+    console.log('in on delete'); //testing
+    //now to figure out what I want to delete
+    let employeeToDelete = $(this).parent();
+    console.log('content to delete is: ', employeeToDelete);
+
+
+
+
+
+
+}
+
 //Going to start a Render function to get values updating the DOM
 function render() {
     //not sure if I need to empty table, but will try
@@ -66,3 +83,5 @@ function render() {
 
 
 }
+
+//function to add up individual salaries from the company and divide by 12
