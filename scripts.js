@@ -53,36 +53,19 @@ console.log('employees in company', company);
 //starting a onDelete function, wish me luck!!! This has been hard before
 function onDelete() {
     let newCompany = [];
-    console.log('in onDelete function', onDelete);
+    console.log('in onDelete function');
     //this employeeToDelete was working but when I submitted another person after deleting they would all come back
     //deleting them is just grabbing them and deleting what is there but not from the overall company array im guessing
-    let employeeToDelete = $(this)
-        employeeToDelete.closest('tr').remove();
-
-        for (let employee of company) {
-            if (employee !== employeeToDelete) {
-                newCompany.push(employee);
-            }
-        }
-
-        company = newCompany;
-    // let newCompany = []; //will hold emplopyees we still want
-    
-    // console.log('in on delete'); //testing
-    // //now to figure out what I want to delete
-    // let employeeToDelete = $(this).parent().siblings();
-    // console.log('content to delete is: ', employeeToDelete);
-
-    //     for (let employee of company) {
-    //         if (employee.id !== employeeToDelete) {
-    //             newCompany.push(employee);
-
-
-    //         }
-
-    //     }
-    //     company = newCompany;
-    //     render();
+    //it's definetely just deleting from the dom, need to update the state as well
+    let employeeToDelete = $(this).closest('tr');
+        //grabbed the row i wanted
+        company.splice(employeeToDelete.index(),1);
+        //looked up how to splice but have questions on it
+        employeeToDelete.remove();
+        
+        render();
+        
+        console.log('Employee to delete: ', employeeToDelete);
 }
 
 //Going to start a Render function to get values updating the DOM
@@ -104,7 +87,9 @@ function render() {
     }
     if (monthlySalaries > 20000) {
         $('#totalBoxLabel').addClass('redBox');
-    }   
+    }   else {
+        $('#totalBoxLabel').removeClass('redBox');
+    }
 
 }
 
